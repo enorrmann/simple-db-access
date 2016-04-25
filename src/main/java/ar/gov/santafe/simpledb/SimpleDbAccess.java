@@ -6,8 +6,6 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
-import javax.inject.Inject;
-import javax.inject.Named;
 import javax.sql.DataSource;
 import org.skife.jdbi.v2.DBI;
 import org.skife.jdbi.v2.Handle;
@@ -20,7 +18,7 @@ import org.skife.jdbi.v2.Update;
  */
 public class SimpleDbAccess {
 
-    private DataSource dataSource;
+    private final DataSource dataSource;
     
     public SimpleDbAccess(DataSource dataSource){
         this.dataSource = dataSource;
