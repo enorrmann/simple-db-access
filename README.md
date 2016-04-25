@@ -1,5 +1,18 @@
 # simple-db-access
+
 # usos
+
+	public class DbProducer {
+
+	    @Resource(name = "jdbc/bladmin")
+	    private DataSource dataSource;
+	    
+	    @Produces @Singleton
+	    public SimpleDbAccess getSimpleDb(){
+	        return new SimpleDbAccess(dataSource);
+	    }
+
+	}
 
     @Inject
     private SimpleDbAccess db;
